@@ -1,0 +1,7 @@
+{{extend 'layout.html'}}
+
+{{for linha in linhas:}}
+	{{=linha.disciplina}}
+{{else:}}
+	{{=T('Nada')}}
+{{pass}}

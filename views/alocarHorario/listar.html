@@ -1,0 +1,27 @@
+{{extend 'layout.html'}}
+
+
+<div align="center">
+{{if len(registros) == 0:}}
+        <h5>{{=T('Nenhum Horário alocado')}}</h5>
+{{else:}}
+        <table>
+              <thead>
+                   <tr>
+                           <th>{{=db.horariosocupados.disciplina.label}}</th>
+                           <th>{{=db.horariosocupados.data.label}}</th>
+                   </tr>
+              </thead>
+                          {{for tupla in registros:}}
+                       <tr>	
+                       		<td height="100px">{{=tupla.id}}</td>
+                            <td height="100px">{{=tupla.data}}</td>
+                            <td>
+                              <a href="visualizar/{{=tupla.id}}">Ver</a>
+                              <a href="desalocarHorarioNaoFixo/?idHorario={{=tupla.id}}">Desalocar</a>
+                            </td>
+                       </tr>
+                       {{pass}}
+               </table>
+       {{pass}}
+</div>

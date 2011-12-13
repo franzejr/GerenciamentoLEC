@@ -1,0 +1,4 @@
+{{extend 'layout.html'}}
+
+<h1>{{=disciplina.nome}}</h1>
+<h3>{{=disciplina.codigo}}</h3>

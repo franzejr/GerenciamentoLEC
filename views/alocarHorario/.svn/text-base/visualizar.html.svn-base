@@ -1,0 +1,16 @@
+{{extend 'layout.html'}}
+
+<h1>{{=horario.disciplina.nome}}</h1>
+<h3>{{=horario.data}}</h3>
+<h3>{{=horario.hora}}</h3>
+{{horariofixo = "Nao Fixo"}}
+{{fixo = "Fixo" }}
+{{ if horario.fixo == False: }}
+
+<h3>{{=fixo}}</h3>
+
+{{else:}}
+
+<h3>{{=naofixo}}</h3>
+
+{{pass}}

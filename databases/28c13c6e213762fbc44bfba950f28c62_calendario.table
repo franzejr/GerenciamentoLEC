@@ -1,0 +1,48 @@
+(dp1
+S'hora'
+p2
+(dp3
+S'type'
+p4
+S'reference horas'
+p5
+sS'sortable'
+p6
+I4
+sS'sql'
+p7
+S'INTEGER REFERENCES horas(id) ON DELETE CASCADE'
+p8
+ssS'data'
+p9
+(dp10
+g4
+S'date'
+p11
+sg6
+I3
+sg7
+S'DATE'
+p12
+ssS'disciplina'
+p13
+(dp14
+g4
+S'reference disciplinas'
+p15
+sg6
+I2
+sg7
+S'INTEGER REFERENCES disciplinas(id) ON DELETE CASCADE'
+p16
+ssS'id'
+p17
+(dp18
+g4
+g17
+sg6
+I1
+sg7
+S'SERIAL PRIMARY KEY'
+p19
+ss.

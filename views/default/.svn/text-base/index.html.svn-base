@@ -1,0 +1,26 @@
+{{extend 'layout.html'}}
+
+{{=message}}
+
+
+<p>Esta aplicação foi desenvolvida para o Laboratório de Estudo de Computação - LEC da <b>Universidade
+Federal do Ceará</b></p>
+Você pode:
+<ul>
+	<li>Manter Disciplinas</li>
+	<li>Incluir/Editar Perídos letivos</li>
+	<li>Alocar um dia fixo semanal para uma determinada disciplina durante um semestre</li>
+	<li>Liberar uma determinada data pertencente a uma alocação fixa semestral</li>
+	<li>Alocar uma determinada data (que não seja fixa) para uma determinada disciplina ou atividade</li>
+	<li>Desalocar uma determinada data de uma alocação não fixa</li>
+</ul>
+
+<br/>
+<br/>
+<br/>
+<div align="center">
+<p>
+Este é o trabalho final da disciplina de Fundamentos de Bancos de Dados.
+</p>
+
+</div>

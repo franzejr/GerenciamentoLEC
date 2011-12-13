@@ -1,0 +1,27 @@
+def index():
+    redirect(URL(r=request,f="listar"))
+
+def alocar():
+    horarioform = SQLFORM(db.horariosocupados,submit_button = T('Alocar Horário'))
+    if horarioform.accepts(request.vars, session):
+       redirect(URL(r=request, f="visualizar", args=horarioform.vars.id))
+    return dict(horarioform=horarioform)
+
+def alterar():
+    horariosocupadosid = request.args(0)
+    horariosocupados = db(db.horariosocupados.id == horariosocupadosid).select()[0]
+    editform = SQLFORM(db.horariosocupados, horariosocupados, deletable=True, submit_button = T('Submeter'))
+    if editform.accepts(request.vars, session):
+        redirect(URL(r=request,f = "visualizar",args=horariosocupadosid))
+    return dict(editform=editform, horariosocupados=horariosocupados)
+
+#Metodo que ira retornar para a visao os horarios que podem ser colocados
+#Eh feita uma consulta na tabela horarios ocupados, pegando somente os que estoa desocupados
+def listar():
+    linhas = db().select(db.horariosocupados.ALL)
+    return dict(linhas=linhas)
+
+def visualizar():
+    horarioid = request.args(0)
+    horario = db(db.horariosocupados.id == horarioid).select()[0]
+    return dict(horario=horario)

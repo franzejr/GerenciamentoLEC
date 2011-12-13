@@ -1,0 +1,39 @@
+timestamp: 2011-12-12T14:23:00.331053
+CREATE TABLE disciplinas(
+    id SERIAL PRIMARY KEY,
+    codigo VARCHAR(512),
+    nome VARCHAR(512)
+);
+success!
+timestamp: 2011-12-12T14:23:00.454842
+CREATE TABLE horas(
+    id SERIAL PRIMARY KEY,
+    intervalo VARCHAR(512)
+);
+success!
+timestamp: 2011-12-12T14:23:00.468342
+CREATE TABLE calendario(
+    id SERIAL PRIMARY KEY,
+    disciplina INTEGER REFERENCES disciplinas(id) ON DELETE CASCADE,
+    data DATE,
+    hora INTEGER REFERENCES horas(id) ON DELETE CASCADE
+);
+success!
+timestamp: 2011-12-12T14:23:00.491543
+CREATE TABLE horariosocupados(
+    id SERIAL PRIMARY KEY,
+    disciplina INTEGER REFERENCES disciplinas(id) ON DELETE CASCADE,
+    data DATE,
+    hora INTEGER REFERENCES horas(id) ON DELETE CASCADE,
+    semestre INTEGER,
+    fixo CHAR(1)
+);
+success!
+timestamp: 2011-12-12T14:23:00.507120
+CREATE TABLE diasletivos(
+    id SERIAL PRIMARY KEY,
+    semestre INTEGER,
+    inicio DATE,
+    fim DATE
+);
+success!

@@ -1,0 +1,28 @@
+{{extend 'layout.html'}}
+
+<h1>Disciplinas</h1>
+
+<div align="center">
+{{if len(registros) == 0:}}
+        <h5>{{=T('Nenhuma disciplina cadastrada')}}</h5>
+{{else:}}
+        <table>
+              <thead>
+                   <tr>
+                           <th>{{=db.disciplinas.nome.label}}</th>
+                           <th>{{=db.disciplinas.codigo.label}}</th>
+                   </tr>
+              </thead>
+                          {{for tupla in registros:}}
+                       <tr>	
+                       		<td height="100px">{{=tupla.nome}}</td>
+                            <td height="100px">{{=tupla.codigo}}</td>
+                            <td>
+                              <a href="visualizar/{{=tupla.id}}">Ver</a>
+                              <a href="alterar/{{=tupla.id}}">Editar</a>  
+                            </td>
+                       </tr>
+                       {{pass}}
+               </table>
+       {{pass}}
+</div>

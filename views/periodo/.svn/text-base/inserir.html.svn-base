@@ -1,0 +1,4 @@
+{{extend 'layout.html'}}
+
+<h1>Cadastrar um novo Período</h1>
+{{=periodoform}}

@@ -1,0 +1,4 @@
+{{extend 'layout.html'}}
+
+<h1>Novo Horário</h1>
+{{=horarioform}}

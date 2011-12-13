@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/fjlmgroup/!svn/ver/29/FBD/lec/controllers
+END
+disciplinas.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/fjlmgroup/!svn/ver/30/FBD/lec/controllers/disciplinas.py
+END
+hora.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/fjlmgroup/!svn/ver/31/FBD/lec/controllers/hora.py
+END
+alocarHorario.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/fjlmgroup/!svn/ver/31/FBD/lec/controllers/alocarHorario.py
+END
+default.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/fjlmgroup/!svn/ver/31/FBD/lec/controllers/default.py
+END
+appadmin.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/fjlmgroup/!svn/ver/29/FBD/lec/controllers/appadmin.py
+END
+periodo.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/fjlmgroup/!svn/ver/31/FBD/lec/controllers/periodo.py
+END
